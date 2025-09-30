@@ -3,8 +3,6 @@
 ## 📁 Repository
 [GitHub Repository](https://github.com/grumongi/portfolio-website)
 
-## 📸 Screenshot
-![Portfolio Website Screenshot](img/gr-img.jpg)
 
 ## 📋 Project Description
 
