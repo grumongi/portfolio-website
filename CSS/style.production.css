@@ -105,57 +105,93 @@ body {
     margin-left: 30px;
   }  
   
+  .work-header {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+  
+  .work-header h1 {
+    margin-bottom: 5px;
+  }
+  
+  .work-header p {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #666;
+  }
+  
   .grid {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;  
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
   }
 
   .grid__item {
     background-color: lightgray;
-    padding: 5px;
-    margin: 5px; 
+    padding: 20px;
+    border-radius: 8px;
     -webkit-transition: -webkit-transform 0.3s ease; 
     transition: -webkit-transform 0.3s ease; 
     transition: transform 0.3s ease; 
     transition: transform 0.3s ease, -webkit-transform 0.3s ease; /* Smooth transition for the hover effect */
     /* Ensuring items scale without affecting layout */
     cursor: pointer; /* Change cursor to pointer */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 200px;
   }
+  .grid__item img {
+    max-width: 100%;
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
   .grid__item:hover {
     -webkit-transform: scale(1.05);
             transform: scale(1.05); /* Scale up by 5% */
 }
-  .grid__item:last-child {
-    --grid-column: 3;
-        grid-column-start: 3;
-    -ms-grid-column-span: 0;
-    grid-column-end: 3;
-    --grid-row: 1;
-        grid-row-start: 1;
-    -ms-grid-row-span: 2;
-    grid-row-end: 3;
-  }
   @media all and (max-width: 500px) {
     .grid {
       -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
+      grid-template-rows: repeat(auto, 1fr);
+      grid-gap: 15px;
+      padding: 10px;
     }
   }
   @media all and (min-width: 500px) and (max-width: 750px){
     .grid {
       -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(auto, 1fr);
+      grid-gap: 15px;
     }
   }
   @media all and (max-width: 750px) {
-    .grid {
-      grid-gap: 10px;
+    .grid__item {
+      min-height: 150px;
     }
-    .grid__item:last-child {
-      grid-column: auto / auto;
-      grid-row: auto / auto;
+    .grid__item img {
+      width: 150px;
+      height: 120px;
     }
     h1 {
       font-size: 22px;

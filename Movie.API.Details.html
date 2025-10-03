@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie API Details</title>
+   <link rel="icon" href="img/favicon.123.ico">
+  <link rel="stylesheet" type="text/css" href="CSS/style.production.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2em; }
+    h1 { color: #0a0c22; text-align: center; margin-bottom: 1em; }
+    h2 { color: #2c3e50; }
+    ul, ol { margin-left: 1.5em; }
+    .section { margin-bottom: 2em; }
+    .screenshot {
+      margin-bottom: 2em;
+      text-align: center;
+    }
+    .screenshot img {
+      max-width: 500px;
+      height: auto;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 8px #eee;
+      display: inline-block;
+    }
+    .screenshot-caption {
+      font-size: 1em;
+      color: #555;
+      margin-top: 0.5em;
+    }
+    .api-endpoints {
+      background: #f8f9fa;
+      border: 1px solid #e9ecef;
+      border-radius: 5px;
+      padding: 1em;
+      margin: 1em 0;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+    }
+    .endpoint {
+      margin-bottom: 0.5em;
+    }
+    .method {
+      background: #007bff;
+      color: white;
+      padding: 0.2em 0.5em;
+      border-radius: 3px;
+      font-weight: bold;
+      margin-right: 0.5em;
+    }
+    .method.post { background: #28a745; }
+    .method.put { background: #ffc107; color: #212529; }
+    .method.delete { background: #dc3545; }
+    .footer-links {
+      text-align: center;
+      margin-top: 3em;
+      padding-top: 1em;
+      border-top: 1px solid #eee;
+    }
+    .footer-btn {
+      display: inline-block;
+      margin: 0 1em;
+      padding: 0.7em 1.5em;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 1.1em;
+      text-decoration: none;
+      color: #fff;
+      background: #007bff;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 2px 8px rgba(0, 123, 255, 0.08);
+      vertical-align: middle;
+    }
+    .footer-btn.github {
+      background: #24292e;
+    }
+    .footer-btn.heroku {
+      background: #430098;
+    }
+    .footer-btn:hover {
+      background: #0056b3;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 4px 16px rgba(0, 123, 255, 0.15);
+    }
+    .footer-btn.github:hover {
+      background: #444950;
+    }
+    .footer-btn.heroku:hover {
+      background: #5a0bb8;
+    }
+    .footer-btn span {
+      margin-right: 0.5em;
+      font-size: 1.2em;
+      vertical-align: middle;
+    }
+
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <div class="page-header__item">
+      <img src="img/logo-with-gr.png" width="150" height="150" alt="gr-img">
+    </div>
+    <div class="page-header__item">
+      <nav class="main-navigation">
+        <ul role="menubar" class="navigation-list">
+          <li role="presentation">
+            <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
+          </li>
+          <li role="presentation">
+            <a href="About G.Rumongi.html" role="menuitem" class="navigation-list__item">About</a>
+          </li>
+          <li role="presentation">
+            <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+          </li>
+          <li role="presentation">
+            <a href="Gustave Rumongi Contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+          </li>         
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <h1>Movie API</h1>
+
+  <div class="screenshot">
+    <img src="img/movie.api.png" alt="Screenshot of Movie API Documentation">
+    <div class="screenshot-caption">RESTful API Documentation and Endpoints</div>
+  </div>
+
+  <div class="section">
+    <h2>Project Overview</h2>
+    <p>
+      A comprehensive <strong>RESTful API for a movie database application</strong> built with Node.js, Express, and MongoDB. This server-side component provides <strong>user management, authentication, and movie data services</strong> for frontend applications. The API features secure JWT authentication, comprehensive movie database operations, and a robust favorites management system.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Key Features</h2>
+    <ul>
+      <li>User Management: Registration, authentication, and profile updates</li>
+      <li>Movie Database: Browse movies with detailed information including genres and directors</li>
+      <li>Favorites System: Add and remove movies from personal favorites list</li>
+      <li>JWT Authentication: Secure API endpoints with JSON Web Tokens</li>
+      <li>Data Validation: Input validation using express-validator</li>
+      <li>CORS Support: Cross-origin resource sharing for frontend applications</li>
+      <li>Password Security: bcrypt for secure password hashing</li>
+      <li>RESTful Architecture: Standard HTTP methods and status codes</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Technologies Used</h2>
+    <ul>
+      <li><strong>Backend Framework:</strong> Node.js with Express.js</li>
+      <li><strong>Database:</strong> MongoDB with Mongoose ODM</li>
+      <li><strong>Authentication:</strong> Passport.js with JWT strategy</li>
+      <li><strong>Password Security:</strong> bcrypt for password hashing</li>
+      <li><strong>Validation:</strong> express-validator for input validation</li>
+      <li><strong>Development Tools:</strong> nodemon, ESLint</li>
+      <li><strong>CORS:</strong> Cross-origin resource sharing middleware</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>API Endpoints</h2>
+    
+    <h3>User Authentication</h3>
+    <div class="api-endpoints">
+      <div class="endpoint">
+        <span class="method post">POST</span> /users - User Registration
+      </div>
+      <div class="endpoint">
+        <span class="method post">POST</span> /login - User Authentication
+      </div>
+    </div>
+
+    <h3>User Management</h3>
+    <div class="api-endpoints">
+      <div class="endpoint">
+        <span class="method">GET</span> /users - Get all users
+      </div>
+      <div class="endpoint">
+        <span class="method">GET</span> /users/:Username - Get user by username
+      </div>
+      <div class="endpoint">
+        <span class="method put">PUT</span> /users/:Username - Update user profile
+      </div>
+      <div class="endpoint">
+        <span class="method delete">DELETE</span> /users/:Username - Delete user account
+      </div>
+    </div>
+
+    <h3>Movie Operations</h3>
+    <div class="api-endpoints">
+      <div class="endpoint">
+        <span class="method">GET</span> /movies - Get all movies
+      </div>
+      <div class="endpoint">
+        <span class="method">GET</span> /movies/:Title - Get movie by title
+      </div>
+      <div class="endpoint">
+        <span class="method">GET</span> /movies/genre/:GenreName - Get movies by genre
+      </div>
+      <div class="endpoint">
+        <span class="method">GET</span> /movies/directors/:DirectorName - Get movies by director
+      </div>
+    </div>
+
+    <h3>Favorites Management</h3>
+    <div class="api-endpoints">
+      <div class="endpoint">
+        <span class="method post">POST</span> /users/:Username/movies/:MovieID - Add movie to favorites
+      </div>
+      <div class="endpoint">
+        <span class="method delete">DELETE</span> /users/:Username/movies/:MovieID - Remove from favorites
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Data Models</h2>
+    
+    <h3>User Model</h3>
+    <ul>
+      <li>Username: String (required, min 5 chars, alphanumeric)</li>
+      <li>Password: String (required, bcrypt hashed)</li>
+      <li>Email: String (required, valid email format)</li>
+      <li>FirstName & LastName: String</li>
+      <li>Birthday: Date</li>
+      <li>FavoriteMovies: Array of Movie ObjectIds</li>
+    </ul>
+
+    <h3>Movie Model</h3>
+    <ul>
+      <li>Title & Description: String (required)</li>
+      <li>Genre: Object with Name and Description</li>
+      <li>Director: Object with Name and Bio</li>
+      <li>Actors: Array of Strings</li>
+      <li>ImagePath: String (movie poster URL)</li>
+      <li>Featured: Boolean flag</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Security & Configuration</h2>
+    <ul>
+      <li><strong>JWT Authentication:</strong> Secure token-based user authentication</li>
+      <li><strong>Password Hashing:</strong> bcrypt encryption for all user passwords</li>
+      <li><strong>Input Validation:</strong> express-validator for server-side data validation</li>
+      <li><strong>CORS Configuration:</strong> Allows specific origins including localhost and production domains</li>
+      <li><strong>Error Handling:</strong> Comprehensive HTTP status codes (200, 201, 400, 401, 404, 422, 500)</li>
+      <li><strong>Environment Variables:</strong> Secure configuration for database and JWT secrets</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Development Process</h2>
+    <p>
+      This API was built following <strong>RESTful architecture principles</strong> and Node.js best practices. The development process included:
+    </p>
+    <ol>
+      <li>Planning API endpoints and data structure design</li>
+      <li>Setting up Express server with MongoDB integration</li>
+      <li>Implementing user authentication with Passport.js and JWT</li>
+      <li>Creating comprehensive CRUD operations for users and movies</li>
+      <li>Adding data validation and error handling middleware</li>
+      <li>Configuring CORS for frontend application integration</li>
+      <li>Testing endpoints with Postman and automated testing</li>
+      <li>Deployment configuration for production environments</li>
+    </ol>
+  </div>
+
+  <div class="footer-links">
+    <a href="https://github.com/grumongi/movie_api" target="_blank" class="footer-btn github">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" style="vertical-align:middle;">
+          <path d="M12 0.297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+        </svg>
+      </span>
+      GitHub Repository
+    </a>
+    <a href="https://movie-api-production.herokuapp.com" target="_blank" class="footer-btn heroku">
+      <span>🚀</span> Live API on Heroku
+    </a>
+  </div>
+</body>
+</html>
