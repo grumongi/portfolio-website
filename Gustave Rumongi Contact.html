@@ -1,70 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="icon" href="img/favicon.123.ico" />
+    <link rel="stylesheet" type="text/css" href="CSS/style.production.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
-  <link rel="icon" href="img/favicon.123.ico">
-  <link rel="stylesheet" type="text/css" href="CSS/style.production.css">
-</head>
+  <body>
+    <header class="page-header">
+      <img
+        src="img/logo-with-gr.png"
+        width="150"
+        length="150"
+        alt="logo-with-gr"
+      />
+      <nav class="main-navigation page-header__item">
+        <ul role="menubar" class="navigation-list">
+          <li role="presentation">
+            <a
+              href="index.html"
+              role="menuitem"
+              class="navigation-list__item navigation-list__item--active"
+              >Home</a
+            >
+          </li>
+          <li role="presentation">
+            <a href="about.html" role="menuitem" class="navigation-list__item"
+              >About</a
+            >
+          </li>
+          <li role="presentation">
+            <a href="work.html" role="menuitem" class="navigation-list__item"
+              >Work</a
+            >
+          </li>
+          <li role="presentation">
+            <a href="contact.html" role="menuitem" class="navigation-list__item"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="work-header">
+      <h1>Contact Me!</h1>
+      <p>
+        I'd love to hear from you! Whether you have a question about my work,
+        want to discuss a potential project, or just want to say hello, feel
+        free to reach out. You can contact me via email at
+        <a href="mailto:gustaverumongi@gmail.com">gustaverumongi@gmail.com</a>
+        and link my
+        <a href="https://www.linkedin.com/in/gustave-rumongi-52581b2a4/"
+          >LinkedIn</a
+        >
+        profile
+        <a href="https://www.linkedin.com/in/gustave-rumongi-52581b2a4/">here</a
+        >.
+      </p>
+      <br />
+      <a href="#"> Contact Me: </a>
 
-<body>
-  <header class="page-header">
-    <img src="img/logo-with-gr.png" width="150" length="150" alt="logo-with-gr">
-    <nav class="main-navigation page-header__item">
-      <ul role="menubar" class="navigation-list">
-        <li role="presentation">
-          <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
-        </li>
-        <li role="presentation">
-          <a href="about.html" role="menuitem" class="navigation-list__item">About</a>
-        </li>
-        <li role="presentation">
-          <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
-        </li>
-        <li role="presentation">
-          <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <div class="work-header">
-  <h1>Contact Me!</h1>
-  <p>I'd love to hear from you! Whether you have a question about my work, want to discuss a potential project, or just want to say hello, feel free to reach out. You can contact me via email at
-    <a href="mailto:gustaverumongi@gmail.com">gustaverumongi@gmail.com</a> and link my <a href="https://www.linkedin.com/in/gustave-rumongi-52581b2a4/">LinkedIn</a> profile <a href="https://www.linkedin.com/in/gustave-rumongi-52581b2a4/">here</a>.</p>
-  <br>
-  <a href="#"> Contact Me: </a>
+      <form action="" method="post" id="contact-form">
+        <label class="standard-label" for="contact-email">E-mail: </label>
+        <input type="email" id="contact-email" required="required" />
+        <br />
 
+        <label class="standard-label" for="Telephone number">Telephone: </label>
+        <input
+          type="tel"
+          pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+          required="required"
+        />
+        <br />
 
-  <form action="" method="post" id="contact-form">
-    <label class="standard-label" for="contact-email">E-mail: </label> <input type="email" id="contact-email"
-      required="required">
-    <br>
+        <label class="standard-label"> Message: </label>
+        <textarea maxlength="240" required="required"></textarea>
+        <br />
 
-    <label class="standard-label" for="Telephone number">Telephone: </label> <input type="tel"
-      pattern="\d{3}[\-]\d{3}[\-]\d{4}" required="required">
-    <br>
+        <button type="submit">Send Message</button>
+      </form>
+      <br />
+      <br />
+    </div>
 
-    <label class="standard-label">
-      Message: </label> <textarea maxlength="240" required="required"></textarea>
-    <br>
-
-    <button type="submit"> Send Message</button>
-  </form>
-  <br>
-  <br>
-  </div>
-
-  <footer class="page-footer">
-    <paragrph> Find me on</paragrph>
-    <a href="https://www.linkedin.com/in/gustave-rumongi-52581b2a4/">
-      <img src="./img/linkedin.svg" alt="linkedin_icon">
-    </a>
-    <a href="https://github.com/grumongi">
-      <img src="./img/github_icon.svg" alt="github_icon">
-    </a>
-  </footer>
-</body>
-
+    <footer class="page-footer">
+      <paragrph> Find me on</paragrph>
+      <a
+        href="https://x.com/GRumongi9566"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="./img/twiter icon.svg" alt="twitter_icon" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/gustave-rumongi-52581b2a4/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="./img/linkedin.svg" alt="linkedin_icon" />
+      </a>
+      <a
+        href="https://github.com/grumongi"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="./img/github_icon.svg" alt="github_icon" />
+      </a>
+      <a
+        href="https://medium.com/@gustaverumongi"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Medium
+      </a>
+    </footer>
+  </body>
 </html>

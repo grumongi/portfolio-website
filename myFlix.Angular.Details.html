@@ -1,253 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>myFlix Angular Client Details</title>
-   <link rel="icon" href="img/favicon.123.ico">
-  <link rel="stylesheet" type="text/css" href="CSS/style.production.css">
-  <style>
-    body { font-family: Arial, sans-serif; margin: 2em; }
-    h1 { color: #0a0c22; text-align: center; margin-bottom: 1em; }
-    h2 { color: #2c3e50; }
-    ul, ol { margin-left: 1.5em; }
-    .section { margin-bottom: 2em; }
-    .screenshot {
-      margin-bottom: 2em;
-      text-align: center;
-    }
-    .screenshot img {
-      max-width: 500px;
-      height: auto;
-      border: 1px solid #ccc;
-      box-shadow: 2px 2px 8px #eee;
-      display: inline-block;
-    }
-    .screenshot-caption {
-      font-size: 1em;
-      color: #555;
-      margin-top: 0.5em;
-    }
-    .tech-highlight {
-      background: linear-gradient(135deg, #dd0031 0%, #c3002f 100%);
-      color: white;
-      padding: 1.5em;
-      border-radius: 8px;
-      margin: 1.5em 0;
-    }
-    .tech-highlight h3 {
-      margin-top: 0;
-      color: white;
-    }
-    .angular-features {
-      background: #f8f9fa;
-      border-left: 4px solid #dd0031;
-      padding: 1em;
-      margin: 1em 0;
-    }
-    .component-structure {
-      background: #fff3f3;
-      border: 1px solid #ffcccc;
-      border-radius: 5px;
-      padding: 1em;
-      margin: 1em 0;
-      font-family: 'Courier New', monospace;
-      font-size: 0.9em;
-    }
-    .api-info {
-      background: #e8f5e8;
-      border: 1px solid #c3e6c3;
-      border-radius: 5px;
-      padding: 1em;
-      margin: 1em 0;
-    }
-    .version-note {
-      background: #fff3cd;
-      border: 1px solid #ffeaa7;
-      border-radius: 5px;
-      padding: 0.8em;
-      margin: 1em 0;
-      font-style: italic;
-    }
-    .footer-links {
-      text-align: center;
-      margin-top: 3em;
-      padding-top: 1em;
-      border-top: 1px solid #eee;
-    }
-    .footer-btn {
-      display: inline-block;
-      margin: 0 1em;
-      padding: 0.7em 1.5em;
-      border-radius: 25px;
-      font-weight: bold;
-      font-size: 1.1em;
-      text-decoration: none;
-      color: #fff;
-      background: #dd0031;
-      transition: background 0.2s, transform 0.2s;
-      box-shadow: 0 2px 8px rgba(221, 0, 49, 0.08);
-      vertical-align: middle;
-    }
-    .footer-btn.github {
-      background: #24292e;
-    }
-    .footer-btn.live {
-      background: #28a745;
-    }
-    .footer-btn:hover {
-      background: #c3002f;
-      transform: translateY(-2px) scale(1.04);
-      box-shadow: 0 4px 16px rgba(221, 0, 49, 0.15);
-    }
-    .footer-btn.github:hover {
-      background: #444950;
-    }
-    .footer-btn.live:hover {
-      background: #218838;
-    }
-    .footer-btn span {
-      margin-right: 0.5em;
-      font-size: 1.2em;
-      vertical-align: middle;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>myFlix Angular Client Details</title>
+    <link rel="icon" href="img/favicon.123.ico" />
+    <link rel="stylesheet" type="text/css" href="CSS/style.production.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 2em;
+      }
+      h1 {
+        color: #0a0c22;
+        text-align: center;
+        margin-bottom: 1em;
+      }
+      h2 {
+        color: #2c3e50;
+      }
+      ul,
+      ol {
+        margin-left: 1.5em;
+      }
+      .section {
+        margin-bottom: 2em;
+      }
+      .screenshot {
+        margin-bottom: 2em;
+        text-align: center;
+      }
+      .screenshot img {
+        max-width: 500px;
+        height: auto;
+        border: 1px solid #ccc;
+        box-shadow: 2px 2px 8px #eee;
+        display: inline-block;
+      }
+      .screenshot-caption {
+        font-size: 1em;
+        color: #555;
+        margin-top: 0.5em;
+      }
+      .tech-highlight {
+        background: linear-gradient(135deg, #dd0031 0%, #c3002f 100%);
+        color: white;
+        padding: 1.5em;
+        border-radius: 8px;
+        margin: 1.5em 0;
+      }
+      .tech-highlight h3 {
+        margin-top: 0;
+        color: white;
+      }
+      .angular-features {
+        background: #f8f9fa;
+        border-left: 4px solid #dd0031;
+        padding: 1em;
+        margin: 1em 0;
+      }
+      .component-structure {
+        background: #fff3f3;
+        border: 1px solid #ffcccc;
+        border-radius: 5px;
+        padding: 1em;
+        margin: 1em 0;
+        font-family: 'Courier New', monospace;
+        font-size: 0.9em;
+      }
+      .api-info {
+        background: #e8f5e8;
+        border: 1px solid #c3e6c3;
+        border-radius: 5px;
+        padding: 1em;
+        margin: 1em 0;
+      }
+      .version-note {
+        background: #fff3cd;
+        border: 1px solid #ffeaa7;
+        border-radius: 5px;
+        padding: 0.8em;
+        margin: 1em 0;
+        font-style: italic;
+      }
+      .footer-links {
+        text-align: center;
+        margin-top: 3em;
+        padding-top: 1em;
+        border-top: 1px solid #eee;
+      }
+      .footer-btn {
+        display: inline-block;
+        margin: 0 1em;
+        padding: 0.7em 1.5em;
+        border-radius: 25px;
+        font-weight: bold;
+        font-size: 1.1em;
+        text-decoration: none;
+        color: #fff;
+        background: #dd0031;
+        transition: background 0.2s, transform 0.2s;
+        box-shadow: 0 2px 8px rgba(221, 0, 49, 0.08);
+        vertical-align: middle;
+      }
+      .footer-btn.github {
+        background: #24292e;
+      }
+      .footer-btn.live {
+        background: #28a745;
+      }
+      .footer-btn:hover {
+        background: #c3002f;
+        transform: translateY(-2px) scale(1.04);
+        box-shadow: 0 4px 16px rgba(221, 0, 49, 0.15);
+      }
+      .footer-btn.github:hover {
+        background: #444950;
+      }
+      .footer-btn.live:hover {
+        background: #218838;
+      }
+      .footer-btn span {
+        margin-right: 0.5em;
+        font-size: 1.2em;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__item">
+        <img src="img/logo-with-gr.png" width="150" height="150" alt="gr-img" />
+      </div>
+      <div class="page-header__item">
+        <nav class="main-navigation">
+          <ul role="menubar" class="navigation-list">
+            <li role="presentation">
+              <a
+                href="index.html"
+                role="menuitem"
+                class="navigation-list__item navigation-list__item--active"
+                >Home</a
+              >
+            </li>
+            <li role="presentation">
+              <a
+                href="About G.Rumongi.html"
+                role="menuitem"
+                class="navigation-list__item"
+                >About</a
+              >
+            </li>
+            <li role="presentation">
+              <a href="work.html" role="menuitem" class="navigation-list__item"
+                >Work</a
+              >
+            </li>
+            <li role="presentation">
+              <a
+                href="Gustave Rumongi Contact.html"
+                role="menuitem"
+                class="navigation-list__item"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  </style>
-</head>
-<body>
-  <header class="page-header">
-    <div class="page-header__item">
-      <img src="img/logo-with-gr.png" width="150" height="150" alt="gr-img">
+    <h1>myFlix Angular Client</h1>
+
+    <div class="screenshot">
+      <img
+        src="img/myFlix.Angular.png"
+        alt="Screenshot of myFlix Angular Client"
+      />
+      <div class="screenshot-caption">
+        myFlix Angular Client - Material Design Movie Database
+      </div>
     </div>
-    <div class="page-header__item">
-      <nav class="main-navigation">
-        <ul role="menubar" class="navigation-list">
-          <li role="presentation">
-            <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
-          </li>
-          <li role="presentation">
-            <a href="About G.Rumongi.html" role="menuitem" class="navigation-list__item">About</a>
-          </li>
-          <li role="presentation">
-            <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
-          </li>
-          <li role="presentation">
-            <a href="Gustave Rumongi Contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <h1>myFlix Angular Client</h1>
-
-  <div class="screenshot">
-    <img src="img/myFlix.Angular.png" alt="Screenshot of myFlix Angular Client">
-    <div class="screenshot-caption">myFlix Angular Client - Material Design Movie Database</div>
-  </div>
-
-  <div class="section">
-    <h2>Project Overview</h2>
-    <p>
-      A sophisticated <strong>movie database application built with Angular 10 and Angular Material</strong>, providing users with comprehensive information about movies, directors, and genres. This client-side application features <strong>modern Material Design UI components</strong> and offers users the ability to register, authenticate, and manage their personal favorite movies collection.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>Project Goal & Purpose</h2>
-    <p>
-      <strong>The primary goal of this project was to build a complete single-page application (SPA) using Angular that demonstrates proficiency in modern frontend development.</strong> The application serves as a movie discovery platform where users can explore films, learn about directors and genres, and curate their personal favorites collection through an intuitive, responsive interface.
-    </p>
-  </div>
-
-  <div class="section">
-    <div class="angular-features">
-      <h2>Technology Stack</h2>
-      <ul>
-        <li><strong>Frontend Framework:</strong> Angular 10.0.14</li>
-        <li><strong>UI Framework:</strong> Angular Material 10.2.7</li>
-        <li><strong>Styling:</strong> SCSS for advanced styling capabilities</li>
-        <li><strong>HTTP Client:</strong> Angular HttpClient for API communication</li>
-        <li><strong>Authentication:</strong> JWT token-based security</li>
-        <li><strong>Backend API:</strong> Node.js/Express with MongoDB integration</li>
-        <li><strong>Build Tool:</strong> Angular CLI 10.0.8</li>
-        <li><strong>Deployment:</strong> GitHub Pages hosting</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Component Overview</h2>
-    <ul>
-      <li><strong>WelcomePageComponent:</strong> Landing page with login/register options</li>
-      <li><strong>MovieCardComponent:</strong> Movie display in card layout with favorite functionality</li>
-      <li><strong>UserRegistrationFormComponent:</strong> User registration with validation</li>
-      <li><strong>UserLoginFormComponent:</strong> Secure user authentication form</li>
-      <li><strong>UserProfileComponent:</strong> User profile management interface</li>
-      <li><strong>Dialog Components:</strong> Interactive modals for movie details, director bio, and genre information</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>API Integration</h2>
-    <div class="api-info">
+    <div class="section">
+      <h2>Project Overview</h2>
       <p>
-        The application connects to a custom movie API hosted at: 
-        <strong>https://cinema-center-api-2025-64a4a412d09b.herokuapp.com/</strong>
+        A sophisticated
+        <strong
+          >movie database application built with Angular 10 and Angular
+          Material</strong
+        >, providing users with comprehensive information about movies,
+        directors, and genres. This client-side application features
+        <strong>modern Material Design UI components</strong> and offers users
+        the ability to register, authenticate, and manage their personal
+        favorite movies collection.
       </p>
-      
-      <h3>API Endpoints Used:</h3>
+    </div>
+
+    <div class="section">
+      <h2>Project Goal & Purpose</h2>
+      <p>
+        <strong
+          >The primary goal of this project was to build a complete single-page
+          application (SPA) using Angular that demonstrates proficiency in
+          modern frontend development.</strong
+        >
+        The application serves as a movie discovery platform where users can
+        explore films, learn about directors and genres, and curate their
+        personal favorites collection through an intuitive, responsive
+        interface.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="angular-features">
+        <h2>Technology Stack</h2>
+        <ul>
+          <li><strong>Frontend Framework:</strong> Angular 10.0.14</li>
+          <li><strong>UI Framework:</strong> Angular Material 10.2.7</li>
+          <li>
+            <strong>Styling:</strong> SCSS for advanced styling capabilities
+          </li>
+          <li>
+            <strong>HTTP Client:</strong> Angular HttpClient for API
+            communication
+          </li>
+          <li><strong>Authentication:</strong> JWT token-based security</li>
+          <li>
+            <strong>Backend API:</strong> Node.js/Express with MongoDB
+            integration
+          </li>
+          <li><strong>Build Tool:</strong> Angular CLI 10.0.8</li>
+          <li><strong>Deployment:</strong> GitHub Pages hosting</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Component Overview</h2>
       <ul>
-        <li><strong>POST /users</strong> - User registration</li>
-        <li><strong>POST /login</strong> - User authentication</li>
-        <li><strong>GET /movies</strong> - Fetch all movies</li>
-        <li><strong>GET /users/:Username</strong> - Get user profile</li>
-        <li><strong>PUT /users/:Username</strong> - Update user profile</li>
+        <li>
+          <strong>WelcomePageComponent:</strong> Landing page with
+          login/register options
+        </li>
+        <li>
+          <strong>MovieCardComponent:</strong> Movie display in card layout with
+          favorite functionality
+        </li>
+        <li>
+          <strong>UserRegistrationFormComponent:</strong> User registration with
+          validation
+        </li>
+        <li>
+          <strong>UserLoginFormComponent:</strong> Secure user authentication
+          form
+        </li>
+        <li>
+          <strong>UserProfileComponent:</strong> User profile management
+          interface
+        </li>
+        <li>
+          <strong>Dialog Components:</strong> Interactive modals for movie
+          details, director bio, and genre information
+        </li>
       </ul>
     </div>
-  </div>
 
-  <div class="section">
-    <h2>Development Process</h2>
-    <p>
-      This Angular application was built following <strong>Angular best practices and Material Design principles</strong>:
-    </p>
-    <ol>
-      <li>Project setup with Angular CLI and Material Design integration</li>
-      <li>Component architecture planning and service layer design</li>
-      <li>Implementing Angular routing for single-page application navigation</li>
-      <li>Creating reusable components with TypeScript strong typing</li>
-      <li>Integrating Angular Material for consistent UI components</li>
-      <li>Implementing HTTP client services for API communication</li>
-      <li>Adding JWT authentication and route guards</li>
-      <li>Building responsive layouts with SCSS styling</li>
-      <li>Testing and deployment to GitHub Pages</li>
-    </ol>
-  </div>
+    <div class="section">
+      <h2>API Integration</h2>
+      <div class="api-info">
+        <p>
+          The application connects to a custom movie API hosted at:
+          <strong
+            >https://cinema-center-api-2025-64a4a412d09b.herokuapp.com/</strong
+          >
+        </p>
 
-  <div class="section">
-    <h2>Development & Testing</h2>
-    <ul>
-      <li><strong>Development Server:</strong> ng serve with live reload on port 4200 or 1234</li>
-      <li><strong>Build Process:</strong> ng build with production optimization</li>
-      <li><strong>Unit Testing:</strong> Karma test runner for component testing</li>
-      <li><strong>E2E Testing:</strong> Protractor for end-to-end testing</li>
-      <li><strong>Documentation:</strong> TypeDoc for automated code documentation</li>
-      <li><strong>Version Management:</strong> NVM for Node.js version control</li>
-    </ul>
-  </div>
+        <h3>API Endpoints Used:</h3>
+        <ul>
+          <li><strong>POST /users</strong> - User registration</li>
+          <li><strong>POST /login</strong> - User authentication</li>
+          <li><strong>GET /movies</strong> - Fetch all movies</li>
+          <li><strong>GET /users/:Username</strong> - Get user profile</li>
+          <li><strong>PUT /users/:Username</strong> - Update user profile</li>
+        </ul>
+      </div>
+    </div>
 
-  <div class="footer-links">
-    <a href="https://github.com/grumongi/myFlix-Angular-client" target="_blank" class="footer-btn github">
-      <span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" style="vertical-align:middle;">
-          <path d="M12 0.297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-        </svg>
-      </span>
-      GitHub Repository
-    </a>
-    <a href="https://grumongi.github.io/myFlix-Angular-client/" target="_blank" class="footer-btn live">
-      <span>🌐</span> Live Demo
-    </a>
-  </div>
-</body>
+    <div class="section">
+      <h2>Development Process</h2>
+      <p>
+        This Angular application was built following
+        <strong>Angular best practices and Material Design principles</strong>:
+      </p>
+      <ol>
+        <li>Project setup with Angular CLI and Material Design integration</li>
+        <li>Component architecture planning and service layer design</li>
+        <li>
+          Implementing Angular routing for single-page application navigation
+        </li>
+        <li>Creating reusable components with TypeScript strong typing</li>
+        <li>Integrating Angular Material for consistent UI components</li>
+        <li>Implementing HTTP client services for API communication</li>
+        <li>Adding JWT authentication and route guards</li>
+        <li>Building responsive layouts with SCSS styling</li>
+        <li>Testing and deployment to GitHub Pages</li>
+      </ol>
+    </div>
+
+    <div class="section">
+      <h2>Development & Testing</h2>
+      <ul>
+        <li>
+          <strong>Development Server:</strong> ng serve with live reload on port
+          4200 or 1234
+        </li>
+        <li>
+          <strong>Build Process:</strong> ng build with production optimization
+        </li>
+        <li>
+          <strong>Unit Testing:</strong> Karma test runner for component testing
+        </li>
+        <li><strong>E2E Testing:</strong> Protractor for end-to-end testing</li>
+        <li>
+          <strong>Documentation:</strong> TypeDoc for automated code
+          documentation
+        </li>
+        <li>
+          <strong>Version Management:</strong> NVM for Node.js version control
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <a
+        href="https://github.com/grumongi/myFlix-Angular-client"
+        target="_blank"
+        class="footer-btn github"
+      >
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="white"
+            style="vertical-align: middle"
+          >
+            <path
+              d="M12 0.297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+            />
+          </svg>
+        </span>
+        GitHub Repository
+      </a>
+      <a
+        href="https://grumongi.github.io/myFlix-Angular-client/"
+        target="_blank"
+        class="footer-btn live"
+      >
+        <span>🌐</span> Live Demo
+      </a>
+    </div>
+  </body>
 </html>

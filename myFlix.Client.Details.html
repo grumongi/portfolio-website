@@ -1,258 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>myFlix Client Details</title>
-   <link rel="icon" href="img/favicon.123.ico">
-  <link rel="stylesheet" type="text/css" href="CSS/style.production.css">
-  <style>
-    body { font-family: Arial, sans-serif; margin: 2em; }
-    h1 { color: #0a0c22; text-align: center; margin-bottom: 1em; }
-    h2 { color: #2c3e50; }
-    ul, ol { margin-left: 1.5em; }
-    .section { margin-bottom: 2em; }
-    .screenshot {
-      margin-bottom: 2em;
-      text-align: center;
-    }
-    .screenshot img {
-      max-width: 500px;
-      height: auto;
-      border: 1px solid #ccc;
-      box-shadow: 2px 2px 8px #eee;
-      display: inline-block;
-    }
-    .screenshot-caption {
-      font-size: 1em;
-      color: #555;
-      margin-top: 0.5em;
-    }
-    .tech-stack {
-      background: #f8f9fa;
-      border-left: 4px solid #e74c3c;
-      padding: 1em;
-      margin: 1em 0;
-    }
-    .feature-highlight {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 1.5em;
-      border-radius: 8px;
-      margin: 1.5em 0;
-    }
-    .feature-highlight h3 {
-      margin-top: 0;
-      color: white;
-    }
-    .api-integration {
-      background: #e8f5e8;
-      border: 1px solid #c3e6c3;
-      border-radius: 5px;
-      padding: 1em;
-      margin: 1em 0;
-    }
-    .footer-links {
-      text-align: center;
-      margin-top: 3em;
-      padding-top: 1em;
-      border-top: 1px solid #eee;
-    }
-    .footer-btn {
-      display: inline-block;
-      margin: 0 1em;
-      padding: 0.7em 1.5em;
-      border-radius: 25px;
-      font-weight: bold;
-      font-size: 1.1em;
-      text-decoration: none;
-      color: #fff;
-      background: #e74c3c;
-      transition: background 0.2s, transform 0.2s;
-      box-shadow: 0 2px 8px rgba(231, 76, 60, 0.08);
-      vertical-align: middle;
-    }
-    .footer-btn.github {
-      background: #24292e;
-    }
-    .footer-btn.netlify {
-      background: #00C7B7;
-    }
-    .footer-btn:hover {
-      background: #c0392b;
-      transform: translateY(-2px) scale(1.04);
-      box-shadow: 0 4px 16px rgba(231, 76, 60, 0.15);
-    }
-    .footer-btn.github:hover {
-      background: #444950;
-    }
-    .footer-btn.netlify:hover {
-      background: #00A693;
-    }
-    .footer-btn span {
-      margin-right: 0.5em;
-      font-size: 1.2em;
-      vertical-align: middle;
-    }
-
-  </style>
-</head>
-<body>
-  <header class="page-header">
-    <div class="page-header__item">
-      <img src="img/logo-with-gr.png" width="150" height="150" alt="gr-img">
-    </div>
-    <div class="page-header__item">
-      <nav class="main-navigation">
-        <ul role="menubar" class="navigation-list">
-          <li role="presentation">
-            <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
-          </li>
-          <li role="presentation">
-            <a href="About G.Rumongi.html" role="menuitem" class="navigation-list__item">About</a>
-          </li>
+  <head>
+    <meta charset="UTF-8" />
+    <title>myFlix Client Details</title>
+    <link rel="icon" href="img/favicon.123.ico" />
+    <link rel="stylesheet" type="text/css" href="CSS/style.production.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 2em;
+      }
+      h1 {
+        color: #0a0c22;
+        text-align: center;
+        margin-bottom: 1em;
+      }
+      h2 {
+        color: #2c3e50;
+      }
+      ul,
+      ol {
+        margin-left: 1.5em;
+      }
+      .section {
+        margin-bottom: 2em;
+      }
+      .screenshot {
+        margin-bottom: 2em;
+        text-align: center;
+      }
+      .screenshot img {
+        max-width: 500px;
+        height: auto;
+        border: 1px solid #ccc;
+        box-shadow: 2px 2px 8px #eee;
+        display: inline-block;
+      }
+      .screenshot-caption {
+        font-size: 1em;
+        color: #555;
+        margin-top: 0.5em;
+      }
+      .tech-stack {
+        background: #f8f9fa;
+        border-left: 4px solid #e74c3c;
+        padding: 1em;
+        margin: 1em 0;
+      }
+      .feature-highlight {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1.5em;
+        border-radius: 8px;
+        margin: 1.5em 0;
+      }
+      .feature-highlight h3 {
+        margin-top: 0;
+        color: white;
+      }
+      .api-integration {
+        background: #e8f5e8;
+        border: 1px solid #c3e6c3;
+        border-radius: 5px;
+        padding: 1em;
+        margin: 1em 0;
+      }
+      .footer-links {
+        text-align: center;
+        margin-top: 3em;
+        padding-top: 1em;
+        border-top: 1px solid #eee;
+      }
+      .footer-btn {
+        display: inline-block;
+        margin: 0 1em;
+        padding: 0.7em 1.5em;
+        border-radius: 25px;
+        font-weight: bold;
+        font-size: 1.1em;
+        text-decoration: none;
+        color: #fff;
+        background: #e74c3c;
+        transition: background 0.2s, transform 0.2s;
+        box-shadow: 0 2px 8px rgba(231, 76, 60, 0.08);
+        vertical-align: middle;
+      }
+      .footer-btn.github {
+        background: #24292e;
+      }
+      .footer-btn.netlify {
+        background: #00c7b7;
+      }
+      .footer-btn:hover {
+        background: #c0392b;
+        transform: translateY(-2px) scale(1.04);
+        box-shadow: 0 4px 16px rgba(231, 76, 60, 0.15);
+      }
+      .footer-btn.github:hover {
+        background: #444950;
+      }
+      .footer-btn.netlify:hover {
+        background: #00a693;
+      }
+      .footer-btn span {
+        margin-right: 0.5em;
+        font-size: 1.2em;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__item">
+        <img src="img/logo-with-gr.png" width="150" height="150" alt="gr-img" />
+      </div>
+      <div class="page-header__item">
+        <nav class="main-navigation">
+          <ul role="menubar" class="navigation-list">
             <li role="presentation">
-            <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+              <a
+                href="index.html"
+                role="menuitem"
+                class="navigation-list__item navigation-list__item--active"
+                >Home</a
+              >
+            </li>
+            <li role="presentation">
+              <a
+                href="About G.Rumongi.html"
+                role="menuitem"
+                class="navigation-list__item"
+                >About</a
+              >
+            </li>
+            <li role="presentation">
+              <a href="work.html" role="menuitem" class="navigation-list__item"
+                >Work</a
+              >
+            </li>
+            <li role="presentation">
+              <a
+                href="Gustave Rumongi Contact.html"
+                role="menuitem"
+                class="navigation-list__item"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <h1>myFlix Client</h1>
+
+    <div class="screenshot">
+      <img src="img/myFlix.png" alt="Screenshot of myFlix Client Application" />
+      <div class="screenshot-caption">
+        myFlix Client - React Movie Database Application
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Project Overview</h2>
+      <p>
+        The <strong>myFlix Client is the front-end application</strong> for the
+        myFlix project, a comprehensive web-based movie database that allows
+        users to browse movies, view detailed information, and manage their
+        favorite films. Built with
+        <strong>React and modern web technologies</strong>, this single-page
+        application provides an intuitive and responsive interface for movie
+        enthusiasts.
+      </p>
+    </div>
+
+    <div class="feature-highlight">
+      <h3>🎬 Key Features</h3>
+      <ul>
+        <li>
+          <strong>User Management:</strong> Registration and login functionality
+        </li>
+        <li>
+          <strong>Movie Browsing:</strong> Browse comprehensive movie database
+        </li>
+        <li>
+          <strong>Detailed Information:</strong> View movie, director, and genre
+          details
+        </li>
+        <li>
+          <strong>Favorites System:</strong> Add or remove movies from personal
+          favorites
+        </li>
+        <li>
+          <strong>Profile Management:</strong> Update user profile information
+        </li>
+        <li>
+          <strong>Advanced Search:</strong> Filter movies by title, genre, or
+          director
+        </li>
+        <li>
+          <strong>Responsive Design:</strong> Optimized for all screen sizes
+          with Bootstrap
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="tech-stack">
+        <h2>Technologies Used</h2>
+        <ul>
+          <li>
+            <strong>React:</strong> Component-based UI library for building
+            interactive interfaces
           </li>
-          <li role="presentation">
-            <a href="Gustave Rumongi Contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+          <li>
+            <strong>React Router:</strong> Client-side routing for single-page
+            application navigation
+          </li>
+          <li><strong>Axios:</strong> HTTP client for API communication</li>
+          <li>
+            <strong>Bootstrap:</strong> CSS framework for responsive design and
+            styling
+          </li>
+          <li>
+            <strong>HTML5 & CSS3:</strong> Modern web standards for structure
+            and presentation
+          </li>
+          <li>
+            <strong>Parcel:</strong> Build tool for development and production
+            bundling
           </li>
         </ul>
-      </nav>
+      </div>
     </div>
-  </header>
 
-  <h1>myFlix Client</h1>
-
-  <div class="screenshot">
-    <img src="img/myFlix.png" alt="Screenshot of myFlix Client Application">
-    <div class="screenshot-caption">myFlix Client - React Movie Database Application</div>
-  </div>
-
-  <div class="section">
-    <h2>Project Overview</h2>
-    <p>
-      The <strong>myFlix Client is the front-end application</strong> for the myFlix project, a comprehensive web-based movie database that allows users to browse movies, view detailed information, and manage their favorite films. Built with <strong>React and modern web technologies</strong>, this single-page application provides an intuitive and responsive interface for movie enthusiasts.
-    </p>
-  </div>
-
-  <div class="feature-highlight">
-    <h3>🎬 Key Features</h3>
-    <ul>
-      <li><strong>User Management:</strong> Registration and login functionality</li>
-      <li><strong>Movie Browsing:</strong> Browse comprehensive movie database</li>
-      <li><strong>Detailed Information:</strong> View movie, director, and genre details</li>
-      <li><strong>Favorites System:</strong> Add or remove movies from personal favorites</li>
-      <li><strong>Profile Management:</strong> Update user profile information</li>
-      <li><strong>Advanced Search:</strong> Filter movies by title, genre, or director</li>
-      <li><strong>Responsive Design:</strong> Optimized for all screen sizes with Bootstrap</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <div class="tech-stack">
-      <h2>Technologies Used</h2>
+    <div class="section">
+      <h2>Application Architecture</h2>
+      <p>
+        The myFlix Client follows <strong>React best practices</strong> with a
+        component-based architecture that promotes reusability and
+        maintainability:
+      </p>
       <ul>
-        <li><strong>React:</strong> Component-based UI library for building interactive interfaces</li>
-        <li><strong>React Router:</strong> Client-side routing for single-page application navigation</li>
-        <li><strong>Axios:</strong> HTTP client for API communication</li>
-        <li><strong>Bootstrap:</strong> CSS framework for responsive design and styling</li>
-        <li><strong>HTML5 & CSS3:</strong> Modern web standards for structure and presentation</li>
-        <li><strong>Parcel:</strong> Build tool for development and production bundling</li>
+        <li>
+          <strong>Component Structure:</strong> Modular components for different
+          app sections
+        </li>
+        <li>
+          <strong>State Management:</strong> React hooks for local and global
+          state handling
+        </li>
+        <li>
+          <strong>Routing:</strong> React Router for seamless navigation between
+          views
+        </li>
+        <li>
+          <strong>API Integration:</strong> Axios for RESTful API communication
+        </li>
+        <li>
+          <strong>Responsive Layout:</strong> Bootstrap grid system for
+          mobile-first design
+        </li>
+        <li>
+          <strong>User Authentication:</strong> Secure login with token-based
+          authentication
+        </li>
       </ul>
     </div>
-  </div>
 
-  <div class="section">
-    <h2>Application Architecture</h2>
-    <p>
-      The myFlix Client follows <strong>React best practices</strong> with a component-based architecture that promotes reusability and maintainability:
-    </p>
-    <ul>
-      <li><strong>Component Structure:</strong> Modular components for different app sections</li>
-      <li><strong>State Management:</strong> React hooks for local and global state handling</li>
-      <li><strong>Routing:</strong> React Router for seamless navigation between views</li>
-      <li><strong>API Integration:</strong> Axios for RESTful API communication</li>
-      <li><strong>Responsive Layout:</strong> Bootstrap grid system for mobile-first design</li>
-      <li><strong>User Authentication:</strong> Secure login with token-based authentication</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>User Experience Features</h2>
+      <div class="api-integration">
+        <h3>🔍 Advanced Search & Filtering</h3>
+        <p>
+          Users can search movies using a single search bar that filters by:
+        </p>
+        <ul>
+          <li>Movie title</li>
+          <li>Genre categories</li>
+          <li>Director names</li>
+        </ul>
 
-  <div class="section">
-    <h2>User Experience Features</h2>
-    <div class="api-integration">
-      <h3>🔍 Advanced Search & Filtering</h3>
-      <p>Users can search movies using a single search bar that filters by:</p>
+        <h3>📱 Responsive Design</h3>
+        <p>The application is fully responsive and optimized for:</p>
+        <ul>
+          <li>Desktop computers</li>
+          <li>Tablets and mobile devices</li>
+          <li>Various screen resolutions</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>API Integration</h2>
+      <p>
+        The myFlix Client seamlessly integrates with the
+        <strong>myFlix API</strong> to provide comprehensive movie database
+        functionality:
+      </p>
       <ul>
-        <li>Movie title</li>
-        <li>Genre categories</li>
-        <li>Director names</li>
-      </ul>
-      
-      <h3>📱 Responsive Design</h3>
-      <p>The application is fully responsive and optimized for:</p>
-      <ul>
-        <li>Desktop computers</li>
-        <li>Tablets and mobile devices</li>
-        <li>Various screen resolutions</li>
+        <li>
+          <strong>User Authentication:</strong> Registration and login endpoints
+        </li>
+        <li>
+          <strong>Movie Data:</strong> Retrieve comprehensive movie information
+        </li>
+        <li><strong>User Profiles:</strong> Profile management and updates</li>
+        <li>
+          <strong>Favorites Management:</strong> Add/remove movies from user
+          favorites
+        </li>
+        <li>
+          <strong>Director & Genre Info:</strong> Detailed information about
+          filmmakers and categories
+        </li>
       </ul>
     </div>
-  </div>
 
-  <div class="section">
-    <h2>API Integration</h2>
-    <p>
-      The myFlix Client seamlessly integrates with the <strong>myFlix API</strong> to provide comprehensive movie database functionality:
-    </p>
-    <ul>
-      <li><strong>User Authentication:</strong> Registration and login endpoints</li>
-      <li><strong>Movie Data:</strong> Retrieve comprehensive movie information</li>
-      <li><strong>User Profiles:</strong> Profile management and updates</li>
-      <li><strong>Favorites Management:</strong> Add/remove movies from user favorites</li>
-      <li><strong>Director & Genre Info:</strong> Detailed information about filmmakers and categories</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2>Development Process</h2>
+      <p>
+        This React application was built following
+        <strong>modern frontend development practices</strong>:
+      </p>
+      <ol>
+        <li>Planning component architecture and user flow design</li>
+        <li>Setting up React project with Parcel build system</li>
+        <li>
+          Implementing React Router for single-page application navigation
+        </li>
+        <li>Creating reusable components with React hooks</li>
+        <li>Integrating Bootstrap for responsive UI design</li>
+        <li>Implementing Axios for API communication</li>
+        <li>Adding user authentication and state management</li>
+        <li>Testing across different devices and screen sizes</li>
+        <li>Deployment optimization and performance tuning</li>
+      </ol>
+    </div>
 
-  <div class="section">
-    <h2>Development Process</h2>
-    <p>
-      This React application was built following <strong>modern frontend development practices</strong>:
-    </p>
-    <ol>
-      <li>Planning component architecture and user flow design</li>
-      <li>Setting up React project with Parcel build system</li>
-      <li>Implementing React Router for single-page application navigation</li>
-      <li>Creating reusable components with React hooks</li>
-      <li>Integrating Bootstrap for responsive UI design</li>
-      <li>Implementing Axios for API communication</li>
-      <li>Adding user authentication and state management</li>
-      <li>Testing across different devices and screen sizes</li>
-      <li>Deployment optimization and performance tuning</li>
-    </ol>
-  </div>
+    <div class="section">
+      <h2>Documentation & Code Quality</h2>
+      <ul>
+        <li>
+          <strong>JSDoc Documentation:</strong> Comprehensive code documentation
+          with examples
+        </li>
+        <li>
+          <strong>Component Descriptions:</strong> Detailed usage instructions
+          for all components
+        </li>
+        <li>
+          <strong>Function Documentation:</strong> Parameter types and return
+          value specifications
+        </li>
+        <li>
+          <strong>Implementation Details:</strong> Code examples and best
+          practices
+        </li>
+        <li>
+          <strong>Generated Docs:</strong> Automatically generated documentation
+          available in docs/index.html
+        </li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2>Documentation & Code Quality</h2>
-    <ul>
-      <li><strong>JSDoc Documentation:</strong> Comprehensive code documentation with examples</li>
-      <li><strong>Component Descriptions:</strong> Detailed usage instructions for all components</li>
-      <li><strong>Function Documentation:</strong> Parameter types and return value specifications</li>
-      <li><strong>Implementation Details:</strong> Code examples and best practices</li>
-      <li><strong>Generated Docs:</strong> Automatically generated documentation available in docs/index.html</li>
-    </ul>
-  </div>
-
-  <div class="footer-links">
-    <a href="https://github.com/grumongi/myFlix-client" target="_blank" class="footer-btn github">
-      <span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" style="vertical-align:middle;">
-          <path d="M12 0.297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-        </svg>
-      </span>
-      GitHub Repository
-    </a>
-    <a href="https://my-amazing-flix-2025.netlify.app" target="_blank" class="footer-btn netlify">
-      <span>🚀</span> Live App on Netlify
-    </a>
-  </div>
-</body>
+    <div class="footer-links">
+      <a
+        href="https://github.com/grumongi/myFlix-client"
+        target="_blank"
+        class="footer-btn github"
+      >
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="white"
+            style="vertical-align: middle"
+          >
+            <path
+              d="M12 0.297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+            />
+          </svg>
+        </span>
+        GitHub Repository
+      </a>
+      <a
+        href="https://my-amazing-flix-2025.netlify.app"
+        target="_blank"
+        class="footer-btn netlify"
+      >
+        <span>🚀</span> Live App on Netlify
+      </a>
+    </div>
+  </body>
 </html>
